@@ -319,5 +319,26 @@ footer{
     }
 }
 
+.candy-btn{
+    background: linear-gradient(135deg, #ff4fd8, #7b2cbf);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(123,44,191,0.3);
+}
+
+.candy-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(123,44,191,0.5);
+}
+
+.candy-btn:active{
+    transform: scale(0.95);
+}
+
 
 
