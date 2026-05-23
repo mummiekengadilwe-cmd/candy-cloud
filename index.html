@@ -26,8 +26,9 @@
     </p>
 
     <a href="#products" class="enter-btn">
-      Enter Sweet World 🍭
-    </a>
+  Enter Sweet World 🍭
+</a>
+
   </div>
 
 </header>
@@ -83,9 +84,11 @@
   </div>
 </section>
 
-<button class="candy-btn">
+<button id="candyBtn" class="candy-btn">
   Click Me 🍬
 </button>
+
+<p id="message"></p>
 
   <nav class="candy-nav">
     <a href="index.html">🏠 Home</a>
@@ -96,8 +99,11 @@
     <a href="delivery.html">🚚 Delivey</a>
   </nav>
 
-  <h2>Our Most Popular Treats</h2>
-  <div class="candy-cards">
+  <section id="products">
+
+<h2>Our Most Popular Treats</h2>
+
+<div class="candy-cards">
 
     <div class="candy-card">
       <img src="Images/sourgummy.png" alt="Gummy Worms">
@@ -135,6 +141,7 @@
         </div>
 
   </div>
+</section>
 
   <h2>Special Offers</h2>
   <div class="offers">
@@ -149,8 +156,10 @@
   </footer>
 
   <script>
-document.getElementById("candyBtn").addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("candyBtn").addEventListener("click", function () {
     document.getElementById("message").innerHTML = "🍬 Sweet choice!";
+  });
 });
 </script>
 

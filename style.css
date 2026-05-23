@@ -340,5 +340,12 @@ footer{
     transform: scale(0.95);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+#products{
+    padding-top: 80px;
+}
 
 
