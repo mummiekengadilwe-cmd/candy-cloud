@@ -25,42 +25,69 @@
 <h2>Order Form</h2>
 
 
-<form>
-    
-    <form class="p-4 border rounded bg-light">
+<form id="orderForm">
 
-  <div class="mb-3">
-    <label class="form-label">Name</label>
-    <input type="text" class="form-control" required>
-  </div>
+    <h2>Place Your Candy Order 🍬</h2>
 
-  <div class="mb-3">
-    <label class="form-label">Email</label>
-    <input type="email" class="form-control" required>
-  </div>
+    <div class="row">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+    </div>
 
-  <div class="mb-3">
-    <label class="form-label">Choose Your Candy</label>
-    <select class="form-select" required>
-      <option selected disabled>Select a candy</option>
-      <option>Gummies</option>
-      <option>Chocolate</option>
-      <option>Lollipops</option>
-      <option>Chewy Sweets</option>
-      <option>Hard Candy</option>
-    </select>
-  </div>
+    <div class="row">
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="text" placeholder="Delivery Address" required>
+    </div>
 
-  <div class="mb-3">
-    <label class="form-label">Quantity</label>
-    <input type="number" class="form-control" min="1" max="100" value="1" required>
-  </div>
+    <div class="row">
+        <select required>
+            <option value="">Choose Your Candy</option>
 
-  <button type="submit" class="btn btn-success">
-    Submit Order
-  </button>
+            <option value="reeses-cups">Reeses Cups</option>
+            <option value="sour-patch-kids">Sour Patch Kids</option>
+            <option value="marshmallows">Marshmallows</option>
+            <option value="caramel-chews">Caramel Chews</option>
+            <option value="candy-canes">Candy Canes</option>
+            <option value="gummies">Gummies</option>
+            <option value="chocolate-bars">Chocolate Bars</option>
+            <option value="lollipops">Lollipops</option>
+        </select>
+
+        <input type="number" placeholder="Quantity" min="1" required>
+    </div>
+
+    <div class="row">
+        <select>
+            <option value="">Packaging Type (Optional)</option>
+            <option value="standard">Standard Bag</option>
+            <option value="gift">Gift Box</option>
+            <option value="premium">Premium Box</option>
+        </select>
+
+        <select>
+            <option value="">Delivery Speed (Optional)</option>
+            <option value="standard">Standard Delivery</option>
+            <option value="express">Express Delivery</option>
+        </select>
+    </div>
+
+    <button type="submit">Submit Order</button>
 
 </form>
+
+<p id="successMessage" style="display:none; color:green; font-weight:bold; margin-top:10px;">
+    🎉 Your order has been successfully received!
+</p>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("successMessage").style.display = "block";
+
+    this.reset();
+});
+</script>
 
 <footer>
     <p>© 2026 Candy Cloud | Sweetness in Every Bite ☁️🍬</p>
